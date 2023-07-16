@@ -1,0 +1,40 @@
+{
+  "name": "chtholly-live2d",
+  "version": "0.1.0",
+  "description": "Chtholly Live2D for Desktop",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "electron:build": "electron-builder",
+    "build": "rollup -c rollup.config.js -f iife | terser -c -m > waifu-tips.js",
+    "build-dev": "rollup -c rollup.config.js -f iife -o waifu-tips.js -w"
+  },
+  "build": {
+    "win": {
+      "icon": "favicon.jpg"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenjoezhang/live2d-widget.git"
+  },
+  "keywords": [
+    "Live2d"
+  ],
+  "author": "stevenjoezhang <stevenjoezhang@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/stevenjoezhang/live2d-widget/issues"
+  },
+  "homepage": "https://github.com/stevenjoezhang/live2d-widget#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/pluginutils": "^5.0.1",
+    "electron": "^25.3.0",
+    "electron-builder": "^24.4.0",
+    "rollup": "^3.2.3",
+    "terser": "^5.15.1"
+  }
+}
